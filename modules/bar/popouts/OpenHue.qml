@@ -18,7 +18,6 @@ Item {
     ColumnLayout {
         id: layout
 
-        width: Tokens.sizes.bar.batteryWidth * 1.4
         spacing: Tokens.spacing.small
 
         StyledText {
@@ -28,30 +27,26 @@ Item {
         }
 
         IconTextButton {
-            Layout.fillWidth: true
             icon: "menu_book"
             text: "Read"
             onClicked: OpenHue.setScene("Read")
         }
 
         IconTextButton {
-            Layout.fillWidth: true
             icon: "weekend"
             text: "Relax"
             onClicked: OpenHue.setScene("Relax")
         }
 
         IconTextButton {
-            Layout.fillWidth: true
             icon: "brightness_low"
             text: "Dimmed"
             onClicked: OpenHue.setScene("Dimmed")
         }
 
         IconTextButton {
-            Layout.fillWidth: true
             icon: "location_city"
-            text: "Chinatown"
+            text: "Sexy Time"
             onClicked: OpenHue.setScene("Chinatown")
         }
 
@@ -63,7 +58,6 @@ Item {
         }
 
         IconTextButton {
-            Layout.fillWidth: true
             icon: "power_settings_new"
             text: "Turn Off"
             type: IconTextButton.Tonal
