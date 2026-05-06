@@ -73,6 +73,10 @@ ColumnLayout {
             popouts.currentName = id.toLowerCase();
             popouts.currentCenter = (ch.item as Item).mapToItem(root, 0, (ch.item as Item).implicitHeight / 2).y ?? 0;
             popouts.hasCurrent = true;
+        } else if (id === "openhue") {
+            popouts.currentName = "openhue";
+            popouts.currentCenter = (ch.item as Item).mapToItem(root, 0, (ch.item as Item).implicitHeight / 2).y ?? 0;
+            popouts.hasCurrent = true;
         }
     }
 
@@ -163,6 +167,13 @@ ColumnLayout {
                 delegate: WrappedLoader {
                     visible: !root.fullscreen
                     sourceComponent: StatusIcons {}
+                }
+            }
+            DelegateChoice {
+                roleValue: "openhue"
+                delegate: WrappedLoader {
+                    visible: !root.fullscreen
+                    sourceComponent: HueWidget {}
                 }
             }
             DelegateChoice {
