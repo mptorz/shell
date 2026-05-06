@@ -34,6 +34,18 @@ Singleton {
         setter.running = true;
     }
 
+    function setScene(name: string): void {
+        const command = ["openhue", "set", "scene", name];
+        setter.command = command;
+        setter.running = true;
+    }
+
+    function turnOffRoom(name: string): void {
+        const command = ["openhue", "set", "room", name, "--off"];
+        setter.command = command;
+        setter.running = true;
+    }
+
     function refresh(): void {
         if (!getLightsProc.running)
             getLightsProc.running = true;
