@@ -46,8 +46,14 @@ Item {
 
         IconTextButton {
             icon: "location_city"
-            text: "Sexy Time"
+            text: "Chinatown"
             onClicked: OpenHue.setScene("Chinatown")
+        }
+
+        IconTextButton {
+            icon: "theater_comedy"
+            text: "Movie"
+            onClicked: OpenHue.setScene("Movie")
         }
 
         Rectangle {
